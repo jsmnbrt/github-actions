@@ -1,0 +1,13 @@
+name: Deploy Web App
+on: push
+
+jobs:
+  deploy_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Code
+        uses: actions/checkout@v3
+      - name: Investigate Host
+        run: |
+          pwd
+          ls -lart
